@@ -20,4 +20,4 @@ services:
 volumes:
   db:
     external:
-      name:db
+      name: db
