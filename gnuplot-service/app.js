@@ -38,4 +38,4 @@ app.post("/", (req, res, next) => {
 });
 
 //Kuuntele porttia 80
-app.listen(8083);
+app.listen(80);
