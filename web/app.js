@@ -89,6 +89,7 @@ app.post("/formula", (req, res, next) => {
 
 //const mongoose_url = "mongodb://mongodb:27017/appdb";
 const mongoose_url = "mongodb://mongodb/appdb";
+//const mongoose_url = "mongodb://localhost:27018/appdb";
 
 console.log(mongoose_url);
 
