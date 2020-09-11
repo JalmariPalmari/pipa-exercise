@@ -2,6 +2,10 @@ const express = require("express");
 const body_parser = require("body-parser");
 const gnuplot = require("gnuplot");
 
+const {
+    Base64Encode
+} = require("base64-stream");
+
 // Asenna paketit konsolista
 // npm install express
 // etc..
@@ -23,7 +27,7 @@ app.use(body_parser.urlencoded({
 
 app.post("/", (req, res, next) => {
     const formula = req.body.formula;
-
+    console.log(formula);
     //plottaa png kuva
     gnuplot()
         .set("term png")
@@ -32,9 +36,6 @@ app.post("/", (req, res, next) => {
             end: true
         })
         .pipe(res);
-
-    console.log(formula);
-    res.send("ok");
 });
 
 //Kuuntele porttia 80
