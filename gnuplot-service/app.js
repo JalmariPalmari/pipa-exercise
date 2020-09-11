@@ -35,6 +35,7 @@ app.post("/", (req, res, next) => {
         .plot(formula, {
             end: true
         })
+        .pipe(new Base64Encode())
         .pipe(res);
 });
 
